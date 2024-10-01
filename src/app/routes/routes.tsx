@@ -7,7 +7,7 @@ import SkillsPage from "../../pages/Skills/SkillsPage";
 
 export const routers = createBrowserRouter([
    {
-      path: '/portfolio',
+      path: '/Portfolio',
       element: <HomePage/>
    },
 
