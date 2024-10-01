@@ -53,10 +53,6 @@ function Header({ sectionRef }: HeadProps) {
       document.body.style.cssText = `overflow: visible`;
    }
 
-
-
-
-
    return (
       <header className="w-full relative z-[60] mb-[70px] shadow drop-shadow-lg h-auto pt-[40px] pb-[30px] ">
          <div className="flex container justify-between relative">
