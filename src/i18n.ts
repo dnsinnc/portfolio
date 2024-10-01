@@ -9,7 +9,14 @@ i18n
    .use(initReactI18next)
    .init({
       debug: true,
-      fallbackLng: 'en'
+      fallbackLng: 'en',
+      backend: {
+         // Вкажи шлях до файлів перекладу
+         loadPath: '/locales/{{lng}}/translation.json',  // або '/portfolio/locales/{{lng}}/translation.json', якщо сайт в підкаталозі
+      },
+      react: {
+         useSuspense: false,
+      },
    });
 
 export default i18n;
