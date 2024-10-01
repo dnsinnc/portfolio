@@ -1,0 +1,26 @@
+{
+   "header": {
+      "nav": {
+         "home": "Home",
+         "skills": "Skills",
+         "proj": "Project",
+         "contacts": "Contacts"
+      }
+   },
+   "main": {
+      "hi": "Hi there!",
+      "name": "My name is",
+      "name2": "Denys",
+      "front": "i'm a front-end developer",
+      "passion": "with a passion for learning and creativity.",
+      "downlCV": "Download CV",
+      "my-proj": "My",
+      "my-proj2": "Projects",
+      "visit-site": "Visit site",
+      "visit-gh": "Visit GitHub"
+   },
+   "skills": {
+         "my-skills": "Skills"
+   
+   }
+}

@@ -1,0 +1,26 @@
+{
+   "header": {
+      "nav": {
+         "home": "Główny",
+         "skills": "Umiejętności",
+         "proj": "Projektowanie",
+         "contacts": "Kontakty"
+      }
+
+   },
+   "main": {
+      "hi": "Cześć!",
+      "name": "Mam na imię",
+      "name2": "Denys",
+      "front": "jestem programistą front-end",
+      "passion": "z pasją do nauki i kreatywności.",
+      "downlCV": "Pobierz CV",
+      "my-proj": "Moje",
+      "my-proj2": "Projekty",
+      "visit-site": "Odwiedź stronę",
+      "visit-gh": "Odwiedź GitHub"
+   },
+   "skills": {
+      "my-skills": "Umiejętności"
+   }
+}

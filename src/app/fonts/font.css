@@ -1,0 +1,13 @@
+@font-face {
+   font-display: swap;
+   font-family: 'Comfortaa';
+   font-weight: 1000;
+   src: url('./Comfortaa/Comfortaa-VariableFont_wght.ttf');
+}
+
+@font-face {
+   font-display: swap;
+   font-family: 'Montserrat';
+   font-weight: 1000;
+   src: url('./Montserrat_Alternates/MontserratAlternates-Bold.ttf');
+}
