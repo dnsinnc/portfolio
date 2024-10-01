@@ -11,8 +11,7 @@ i18n
       debug: true,
       fallbackLng: 'en',
       backend: {
-         // Вкажи шлях до файлів перекладу
-         loadPath: '/locales/{{lng}}/translation.json',  // або '/portfolio/locales/{{lng}}/translation.json', якщо сайт в підкаталозі
+         loadPath: '/portfolio/locales/{{lng}}/translation.json'  
       },
       react: {
          useSuspense: false,

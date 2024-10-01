@@ -5,6 +5,7 @@ import { GoChevronDown } from "react-icons/go";
 import { MutableRefObject, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { TiThMenu } from "react-icons/ti";
 
 
 interface HeadProps {
@@ -15,7 +16,7 @@ function Header({ sectionRef }: HeadProps) {
    const { t, i18n } = useTranslation()
 
    const [changeLang, setChangeLang] = useState({ open: false, lang: localStorage.getItem("lang") })
-
+   const [openMenu, setOpenMenu] = useState(false)
 
    const nav = useNavigate()
 
@@ -36,29 +37,53 @@ function Header({ sectionRef }: HeadProps) {
    }
    
    const buttonHandler = (ref: MutableRefObject<null> | undefined) => {
-      nav('/')
+      nav('/portfolio')
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       ref.current.scrollIntoView();
+      setOpenMenu(false)
+
    };
+
+   const onOpenMenu = () => {
+      setOpenMenu(!openMenu)
+      document.body.style.cssText = `overflow: hidden`;
+   }
+   if (!openMenu) {
+      document.body.style.cssText = `overflow: visible`;
+   }
+
+
+
 
 
    return (
-      <header className="w-full relative z-10 mb-[70px] shadow drop-shadow-lg h-auto pt-[40px] pb-[30px] ">
+      <header className="w-full relative z-[60] mb-[70px] shadow drop-shadow-lg h-auto pt-[40px] pb-[30px] ">
          <div className="flex container justify-between relative">
             <div>
                <div 
                   className=" after:-top-[250px] after:opacity-[0.4] after:-z-10 after:left-[0px] after:absolute after:bg-no-repeat after:w-[300px] after:h-[300px] after:bg-decor cursor-pointer text-[#000080] text-[40px]">
-                  <h1 onClick={() => nav('/')}>𝓓𝓮𝓷𝔂𝓼</h1>
+                  <h1 onClick={() => nav('/portfolio')}>𝓓𝓮𝓷𝔂𝓼</h1>
                   </div>
             </div>
-            <div className='flex pr-[100px] gap-20'>
+            <div className='flex items-center pr-[100px] gap-10'>
                <nav className='lg:flex hidden items-center'>
                   <li className="flex cursor-pointer gap-5 text-xl">
-                     <ol onClick={() => nav('/')}> {t('header.nav.home')}</ol>
+                     <ol onClick={() => nav('/portfolio')}> {t('header.nav.home')}</ol>
                      <ol onClick={() => buttonHandler(sectionRef)}>{t('header.nav.proj')}</ol>
-                     <ol onClick={() => nav('/my-skills')} >{t('header.nav.skills')}</ol>
+                     <ol onClick={() => nav('/portfolio/my-skills')} >{t('header.nav.skills')}</ol>
                      <ol>{t('header.nav.contacts')}</ol>
+                  </li>
+               </nav>
+               <button className='lg:hidden block items-center' onClick={onOpenMenu}><TiThMenu color='000080' size={'30px'}/></button>
+               <nav className={`z-[100] absolute h-[100vh] w-full bg-[black] opacity-[0.7] -top-[2000px] left-0 ${openMenu ? 'openmenu' : ''}`}>
+                  <li className="flex flex-col text-center text-[white] pt-[100px] cursor-pointer gap-5 text-[40px]">
+                     <ol onClick={() => { setOpenMenu(false); nav('/portfolio') }}> {t('header.nav.home')}</ol>
+                     <ol onClick={() => buttonHandler(sectionRef)}>{t('header.nav.proj')}</ol>
+                     <ol onClick={() => { setOpenMenu(false); nav('/portfolio/my-skills')}} >{t('header.nav.skills')}</ol>
+                     <ol>{t('header.nav.contacts')}</ol>
+                     <button className='relative z-[100]' onClick={() => setOpenMenu(false)}>CLOSE</button>
+
                   </li>
                </nav>
                <div onClick={toggleLangMenu} className='flex cursor-pointer absolute right-0'>

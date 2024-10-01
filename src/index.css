@@ -56,6 +56,20 @@ body {
 }
 
 
+@keyframes openMenu {
+   0% {
+      top: -2000px;
+   }
+
+   100% {
+            top: -40px;
+   }
+}
+
+.openmenu{
+      animation: openMenu 1s ease forwards;
+}
+
 .projects {
    padding-top: 40px;
    display: grid;
