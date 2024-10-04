@@ -15,16 +15,17 @@ function ProductPage() {
    // @ts-ignore
    const selectedProj = project[paramsID]
 
+
+
    const flickityOptions = {
       initialIndex: 1,
       autoPlay: true
    }
    return (
-      <div className="">
-         <div className="bg-main-back5 h-[100vh] bg-center bg-cover">
+      <div className="page bg-main-back5 bg-center bg-cover">
             <Header></Header>
-            <section className="container flex h-auto justify-center">
-               <div className="w-[1400px]">{
+            <section className="container flex pb-[100px] justify-center">
+               <div className="w-full px-[20px]">{
                   selectedProj.slider !== true ? (
                      <div className="pb-[20px] flex flex-col items-center shadow-2xl rounded-[30px] bg-[#ffffff] cursor-pointer gap-3" key={selectedProj.image}>
                         <img className="h-auto" src={selectedProj.image} alt={selectedProj.title} />
@@ -48,7 +49,6 @@ function ProductPage() {
                   </div>
                </div>
             </section>
-         </div>
          <Footer></Footer>
       </div>
 

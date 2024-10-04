@@ -20,11 +20,9 @@ function SkillsPage() {
    const { t } = useTranslation()
 
    return (
-      <>
-         <div className="bg-main-back3 h-[100vh] bg-cover bg-center" >
+      <div className="page bg-main-back3 bg-cover bg-center">
             <Header></Header>
-            <section className="container text-center m-auto ">
-
+            <section className="container h-full pb-[300px] text-center m-auto ">
                <h3 className="text-[60px] font-['Montserrat']">{t('main.my-proj')} <span className="text-[#000080] font-['Montserrat']">{t('skills.my-skills')}:</span></h3>
                <ol className="pt-[60px] drop-shadow-md flex flex-col items-center bg-main-back-2 bg-no-repeat bg-center">
                   <li ><a className="skill-item" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript <FaJsSquare /></a> </li>
@@ -42,9 +40,8 @@ function SkillsPage() {
                   <li><a href="https://docs.github.com/en" className="skill-item">GitHub <FaGithub /></a></li>
                </ol>
             </section>
-         </div>
          <Footer></Footer>
-      </>
+      </div>
    );
 }
 

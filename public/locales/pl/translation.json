@@ -21,5 +21,9 @@
    },
    "skills": {
       "my-skills": "Umiejętności"
+   },
+   "contacts": {
+      "my-cont": "Kontakty",
+      "my-loc": "Lokalizacja"
    }
 }

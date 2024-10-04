@@ -18,14 +18,22 @@ body {
 
 }
 
+
 .container {
+   min-height: 100%;
    max-width: 1520px;
+   position: relative;
    @apply px-[20px] mx-auto
+   
 }
 
-.s {
-   background-image: url('./pages/Home/image/main-back.png');
+.page{
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   min-height: 100vh;
 }
+
+
 
 .showLangMenu {
    animation: showLangMenu 1s ease forwards;
@@ -34,6 +42,8 @@ body {
 .hideLangMenu {
    animation: hideLangMenu 1s ease forwards;
 }
+
+
 
 @keyframes showLangMenu {
    0% {
@@ -59,10 +69,12 @@ body {
 @keyframes openMenu {
    0% {
       top: -2000px;
+      opacity: 0;
    }
 
    100% {
             top: -40px;
+            opacity: 0.6;
    }
 }
 
@@ -115,3 +127,41 @@ body {
 .skill-item:hover {
    color: rgb(48, 42, 165);
 }
+
+
+.nav-active{
+   width: auto;
+   position: relative;
+}
+
+.nav-active::after{
+   content: '';
+   bottom: -5px;
+   right: 0;
+   position: absolute;
+   border-radius: 10px;
+   height: 4px;
+   width: 100%;
+   background-color: blue;
+
+   animation: nav-active 1s ease forwards;
+}
+
+
+@keyframes nav-active {
+   from{
+      width: 0;
+      opacity: 0;
+   }
+   to{
+      width: 100%;
+opacity: 1;
+   }
+}
+
+.li-text{
+   transition: all 0.3s;
+
+   @apply hover:text-[#000080] hover:scale-105
+}
+
