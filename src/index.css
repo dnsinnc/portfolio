@@ -79,7 +79,7 @@ body {
 }
 
 .openmenu{
-      animation: openMenu 1s ease forwards;
+      animation: openMenu 2s ease forwards;
 }
 
 .projects {
