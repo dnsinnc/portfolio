@@ -22,5 +22,9 @@
    "skills": {
          "my-skills": "Skills"
    
+   },
+   "contacts": {
+      "my-cont": "Contacts",
+      "my-loc": "Location"
    }
 }
