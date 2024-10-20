@@ -24,8 +24,9 @@ function ProductPage() {
    return (
       <div className="page bg-main-back5 bg-center bg-cover">
             <Header></Header>
-            <section className="container flex pb-[100px] justify-center">
-               <div className="w-full px-[20px]">{
+         <section className="container  flex pb-[100px] justify-center">
+            <div className="w-[100%]  lg:px-[200px]">
+               <div className="w-full px-[20px] ">{
                   selectedProj.slider !== true ? (
                      <div className="pb-[20px] flex flex-col items-center shadow-2xl rounded-[30px] bg-[#ffffff] cursor-pointer gap-3" key={selectedProj.image}>
                         <img className="h-auto" src={selectedProj.image} alt={selectedProj.title} />
@@ -48,6 +49,7 @@ function ProductPage() {
                      <a className="text-[clamp(20px,3.5vw,30px)] cursor-pointer font-['Montserrat'] transition duration-[.3s] hover:text-[#222e78]" href={selectedProj.gh}>{t("main.visit-gh")} </a>
                   </div>
                </div>
+            </div>
             </section>
          <Footer></Footer>
       </div>

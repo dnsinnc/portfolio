@@ -76,7 +76,7 @@ function Header({ sectionRef }: HeadProps) {
    }
 
    return (
-      <header className="w-full relative z-[60] mb-[70px] shadow drop-shadow-lg h-auto pt-[40px] pb-[30px] ">
+      <header className="w-full relative z-[60] mb-[20px] shadow drop-shadow-lg h-auto pt-[40px] pb-[30px] ">
          <div className="flex container justify-between relative">
             <div>
                <div 

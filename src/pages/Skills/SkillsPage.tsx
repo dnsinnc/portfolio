@@ -20,11 +20,12 @@ function SkillsPage() {
    const { t } = useTranslation()
 
    return (
-      <div className="page bg-main-back3 bg-cover bg-center">
+      <div className="page  bg-main-back3 bg-cover bg-center">
             <Header></Header>
             <section className="container h-full pb-[300px] text-center m-auto ">
-               <h3 className="text-[60px] font-['Montserrat']">{t('main.my-proj')} <span className="text-[#000080] font-['Montserrat']">{t('skills.my-skills')}:</span></h3>
-               <ol className="pt-[60px] drop-shadow-md flex flex-col items-center bg-main-back-2 bg-no-repeat bg-center">
+            <h3 className="text-[60px] font-['Montserrat']">{t('main.my-proj')} <span className="text-[#000080] font-['Montserrat']">{t('skills.my-skills')}:</span></h3>
+               <ol className="pt-[60px] drop-shadow-md  flex flex-col items-center  ">
+               
                   <li ><a className="skill-item" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript <FaJsSquare /></a> </li>
                   <li><a href="https://www.typescriptlang.org/docs/" className="skill-item">TypeScript <SiTypescript /></a></li>
                   <li><a href="https://react.dev/reference/react" className="skill-item">ReactJS <RiReactjsFill /></a></li>
